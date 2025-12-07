@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -12,7 +11,7 @@
   }
   *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
   header{position:sticky;top:0;z-index:10;background:#0f1317;border-bottom:1px solid var(--border)}
-  .container{max-width:1200px;margin:0 auto;padding:16px}
+  .container{max-width:1500px;margin:0 auto;padding:16px}
   .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
   .brand{display:flex;align-items:center;gap:10px}
   .brand img{height:44px;border-radius:6px;object-fit:cover}
