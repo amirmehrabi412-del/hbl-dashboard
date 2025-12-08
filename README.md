@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -100,93 +101,240 @@
     </div>
 
     <section id="tab-dashboard">
-      <div class="row kpis" style="margin-top:12px">
-        <div class="card"><h3 class="metric-title">Temperature <span class="badge" id="badge-temp"></span><svg class="metric-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34" style="stroke:white;fill:none;stroke-width:2;vertical-align:middle;margin-left:8px;flex-shrink:0;"><path d="M12 2a4 4 0 0 0-4 4v8.5a5 5 0 1 0 8 0V6a4 4 0 0 0-4-4z"/><line x1="12" y1="10" x2="12" y2="18"/><circle cx="12" cy="18" r="2"/></svg></h3><div class="value"><span id="val-temp">—</span> <span class="unit">°C</span></div><div class="unit">Good 20–26 · Warn 18–28</div><input type="number" id="co-input" placeholder="Enter value" /></div>
-        <div class="card"><h3>Humidity <span class="badge" id="badge-rh"></span></h3><div class="value"><span id="val-rh">—</span> <span class="unit">%RH</span></div><div class="unit">Good 30–60 · Warn 25–65</div><input type="number" id="co-input" placeholder="Enter value" /></div>
-        <div class="card"><h3>CO₂ <span class="badge" id="badge-co2"></span></h3><div class="value"><span id="val-co2">—</span> <span class="unit">ppm</span></div><div class="unit">Good 400–800 · Warn 800–1000</div><input type="number" id="co-input" placeholder="Enter value" /></div>
-        <div class="card"><h3>PM2.5 <span class="badge" id="badge-pm25"></span></h3><div class="value"><span id="val-pm25">—</span> <span class="unit">µg/m³</span></div><div class="unit">Good 0–12 · Warn 12–35</div><input type="number" id="co-input" placeholder="Enter value" /></div>
-        <div class="card"><h3>TVOC <span class="badge" id="badge-voc"></span></h3><div class="value"><span id="val-voc">—</span> <span class="unit">mg/m³</span></div><div class="unit">Good 0–0.3 · Warn 0.3–0.6</div><input type="number" id="co-input" placeholder="Enter value" /></div>
-      </div>
-	 <div class="card"><h3>PM10 <span class="badge b-ok">NA</span></h3><div class="value">— <span class="unit">µg/m³</span></div>
-   	 <div class="range">Good 0–50 · Warn 50–75</div><input type="number" id="co-input" placeholder="Enter value" /></div>
- 	 <div class="card">
-   	 <h3>Radon <span class="badge b-ok">NA</span></h3>
-    	<div class="value">— <span class="unit">Bq/m³ (pCi/L)</span></div>
-    	<div class="range">Good 0–4 · Warn 100–300</div>
- 	<input type="number" id="co-input" placeholder="Enter value" />
- 	 </div>
-	<div class="card">
-  	<h3>CO <span class="badge b-ok">NA</span></h3>
- 	 <div class="value" >— <span class="unit">ppm </span></div>
- 	<div class="range">Good 0–9 · Warn 9–35</div>
- 	 <input type="number" id="co-input" placeholder="Enter value" />
-	</div>
-	<div class="card">
-  	<h3>No2 <span class="badge b-ok">NA</span></h3>
- 	 <div class="value" >— <span class="unit">µg/m³</span></div>
- 	<div class="range">Good 0–25 · Warn 25–50</div>
- 	 <input type="number" id="co-input" placeholder="Enter value" />
-	</div>
-	<div class="card">
-  	<h3>O3 <span class="badge b-ok">NA</span></h3>
- 	 <div class="value" >— <span class="unit">µg/m³</span></div>
- 	<div class="range">Good 0–100 · Warn 100–160</div>
- 	 <input type="number" id="co-input" placeholder="Enter value" />
-	</div>
-	<div class="card">
-  	<h3>Ch2O <span class="badge b-ok">NA</span></h3>
- 	 <div class="value" >— <span class="unit">µg/m³</span></div>
- 	<div class="range">Good 0–33 · Warn 33–100</div>
- 	 <input type="number" id="co-input" placeholder="Enter value" />
-	</div>
-	<div class="card">
-  	<h3>Noise <span class="badge b-ok">NA</span></h3>
- 	 <div class="value" >— <span class="unit">dB</span></div>
- 	<div class="range">Good 0–35 · Warn 35–45</div>
- 	 <input type="number" id="co-input" placeholder="Enter value" />
-	</div>
-	<div class="card">
-  	<h3>TDS <span class="badge b-ok">NA</span></h3>
- 	 <div class="value" >— <span class="unit">ppm</span></div>
- 	<div class="range">Good 0–300 · Warn 300–500</div>
- 	 <input type="number" id="co-input" placeholder="Enter value" />
-	</div>
-	<div class="card">
-  	<h3>Illuminance <span class="badge b-ok">NA</span></h3>
- 	 <div class="value" >— <span class="unit">LUX</span></div>
- 	<div class="range">Good NA–NA · Warn NA–NA</div>
- 	 <input type="number" id="co-input" placeholder="Enter value" />
-	</div>
-	<div class="card">
-  	<h3>WBGT <span class="badge b-ok">NA</span></h3>
- 	 <div class="value" >— <span class="unit">°C</span></div>
- 	<div class="range">Good NA–NA · Warn NA–NA</div>
- 	 <input type="number" id="co-input" placeholder="Enter value" />
-	</div>
+  <div class="row kpis" style="margin-top:12px">
 
-      <div class="row two" style="margin-top:12px">
-        <div class="card">
-          <h3>Healthy Building Alarms <span id="alarmMedal" class="medal hidden">MEDAL</span></h3>
-          <div class="value" id="alarm-total">0</div>
-          <div class="unit">Total Alarms</div>
-          <div style="margin-top:12px;">Urgent: <b id="alarm-urgent">0</b> | High: <b id="alarm-high">0</b></div>
-        </div>
-        <div class="card">
-          <h3>Project</h3>
-          <div id="projectSummary" style="color:var(--muted)">No identity saved.</div>
-        </div>
-      </div>
+    <!-- Temperature -->
+    <div class="card">
+      <h3 class="metric-title">
+        Temperature <span class="badge" id="badge-temp"></span>
+        <svg class="metric-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34"
+          style="stroke:white;fill:none;stroke-width:2;vertical-align:middle;margin-left:8px;">
+          <path d="M12 2a4 4 0 0 0-4 4v8.5a5 5 0 1 0 8 0V6a4 4 0 0 0-4-4z" />
+          <line x1="12" y1="10" x2="12" y2="18" />
+          <circle cx="12" cy="18" r="2" />
+        </svg>
+      </h3>
+      <div class="value"><span id="val-temp">—</span> <span class="unit">°C</span></div>
+      <div class="unit">Good 20–26 · Warn 18–28</div>
+      <input type="number" placeholder="Enter value" />
+    </div>
 
-      <div class="card" style="margin-top:12px">
-        <h3>Alarm List</h3>
-        <div style="overflow-x:auto">
-          <table>
-            <thead><tr><th>Priority</th><th>Date & Time</th><th>Zone</th><th>Device</th><th>Type</th><th>Value</th><th>Limit</th></tr></thead>
-            <tbody id="alarmBody"><tr><td colspan="7" style="color:var(--muted)">No data yet.</td></tr></tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <!-- Humidity -->
+    <div class="card">
+      <h3>Humidity <span class="badge" id="badge-rh"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34"
+          style="stroke:white;fill:none;stroke-width:2;vertical-align:middle;margin-left:8px;">
+          <path d="M12 2.7l5 5a7 7 0 1 1-10 0l5-5z" />
+        </svg>
+      </h3>
+      <div class="value"><span id="val-rh">—</span> <span class="unit">%RH</span></div>
+      <div class="unit">Good 30–60 · Warn 25–65</div>
+      <input type="number" placeholder="Enter value" />
+    </div>
+
+    <!-- CO2 -->
+    <div class="card">
+      <h3>CO₂ <span class="badge" id="badge-co2"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34"
+          style="stroke:white;fill:none;stroke-width:2;margin-left:8px;vertical-align:middle;">
+          <circle cx="12" cy="12" r="9" />
+          <text x="9" y="16" fill="white" stroke="none" font-size="8">CO2</text>
+        </svg>
+      </h3>
+      <div class="value"><span id="val-co2">—</span> <span class="unit">ppm</span></div>
+      <div class="unit">Good 400–800 · Warn 800–1000</div>
+      <input type="number" placeholder="Enter value" />
+    </div>
+
+    <!-- PM2.5 -->
+    <div class="card">
+      <h3>PM2.5 <span class="badge" id="badge-pm25"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+          style="stroke:white;fill:none;stroke-width:2;margin-left:8px;">
+          <circle cx="7" cy="12" r="3" />
+          <circle cx="14" cy="10" r="2" />
+          <circle cx="17" cy="15" r="3" />
+        </svg>
+      </h3>
+      <div class="value"><span id="val-pm25">—</span> <span class="unit">µg/m³</span></div>
+      <div class="unit">Good 0–12 · Warn 12–35</div>
+      <input type="number" placeholder="Enter value" />
+    </div>
+
+    <!-- TVOC -->
+    <div class="card">
+      <h3>TVOC <span class="badge" id="badge-voc"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+          style="stroke:white;fill:none;stroke-width:2;margin-left:8px;">
+          <path d="M3 3h18v18H3z" />
+          <path d="M8 8h8v8H8z" />
+        </svg>
+      </h3>
+      <div class="value"><span id="val-voc">—</span> <span class="unit">mg/m³</span></div>
+      <div class="unit">Good 0–0.3 · Warn 0.3–0.6</div>
+      <input type="number" placeholder="Enter value" />
+    </div>
+  </div>
+
+  <!-- PM10 -->
+  <div class="card">
+    <h3>PM10 <span class="badge b-ok">NA</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+        style="stroke:white;fill:none;stroke-width:2;margin-left:8px;">
+        <circle cx="12" cy="12" r="4" />
+      </svg>
+    </h3>
+    <div class="value">— <span class="unit">µg/m³</span></div>
+    <div class="range">Good 0–50 · Warn 50–75</div>
+    <input type="number" placeholder="Enter value" />
+  </div>
+
+  <!-- Radon -->
+  <div class="card">
+    <h3>Radon <span class="badge b-ok">NA</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+        style="stroke:white;fill:none;stroke-width:2;margin-left:8px;">
+        <path d="M12 2v20M2 12h20" />
+      </svg>
+    </h3>
+    <div class="value">— <span class="unit">Bq/m³ (pCi/L)</span></div>
+    <div class="range">Good 0–4 · Warn 100–300</div>
+    <input type="number" placeholder="Enter value" />
+  </div>
+
+  <!-- CO -->
+  <div class="card">
+    <h3>CO <span class="badge b-ok">NA</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+        style="stroke:white;fill:none;stroke-width:2;margin-left:8px;">
+        <circle cx="12" cy="12" r="9" />
+      </svg>
+    </h3>
+    <div class="value">— <span class="unit">ppm</span></div>
+    <div class="range">Good 0–9 · Warn 9–35</div>
+    <input type="number" placeholder="Enter value" />
+  </div>
+
+  <!-- NO2 -->
+  <div class="card">
+    <h3>No2 <span class="badge b-ok">NA</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+        style="stroke:white;fill:none;stroke-width:2;margin-left:8px;">
+        <path d="M4 4h16v16H4z" />
+      </svg>
+    </h3>
+    <div class="value">— <span class="unit">µg/m³</span></div>
+    <div class="range">Good 0–25 · Warn 25–50</div>
+    <input type="number" placeholder="Enter value" />
+  </div>
+
+  <!-- Ozone -->
+  <div class="card">
+    <h3>O3 <span class="badge b-ok">NA</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+        style="stroke:white;fill:none;stroke-width:2;margin-left:8px;">
+        <circle cx="12" cy="12" r="6" />
+      </svg>
+    </h3>
+    <div class="value">— <span class="unit">µg/m³</span></div>
+    <div class="range">Good 0–100 · Warn 100–160</div>
+    <input type="number" placeholder="Enter value" />
+  </div>
+
+  <!-- CH2O -->
+  <div class="card">
+    <h3>Ch2O <span class="badge b-ok">NA</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+        style="stroke:white;fill:none;stroke-width:2;margin-left:8px;">
+        <path d="M3 12h18M12 3v18" />
+      </svg>
+    </h3>
+    <div class="value">— <span class="unit">µg/m³</span></div>
+    <div class="range">Good 0–33 · Warn 33–100</div>
+    <input type="number" placeholder="Enter value" />
+  </div>
+
+  <!-- Noise -->
+  <div class="card">
+    <h3>Noise <span class="badge b-ok">NA</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+        style="stroke:white;fill:none;stroke-width:2;margin-left:8px;">
+        <path d="M3 10v4M7 8v8M11 6v12M15 8v8M19 10v4" />
+      </svg>
+    </h3>
+    <div class="value">— <span class="unit">dB</span></div>
+    <div class="range">Good 0–35 · Warn 35–45</div>
+    <input type="number" placeholder="Enter value" />
+  </div>
+
+  <!-- TDS -->
+  <div class="card">
+    <h3>TDS <span class="badge b-ok">NA</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+        style="stroke:white;fill:none;stroke-width:2;margin-left:8px;">
+        <path d="M4 4h16v16H4z" />
+      </svg>
+    </h3>
+    <div class="value">— <span class="unit">ppm</span></div>
+    <div class="range">Good 0–300 · Warn 300–500</div>
+    <input type="number" placeholder="Enter value" />
+  </div>
+
+  <!-- Illuminance -->
+  <div class="card">
+    <h3>Illuminance <span class="badge b-ok">NA</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+        style="stroke:white;fill:none;stroke-width:2;margin-left:8px;">
+        <circle cx="12" cy="12" r="5" />
+        <path d="M12 1v3M12 20v3M4 12H1M23 12h-3M5 5L3 3M21 21l-2-2" />
+      </svg>
+    </h3>
+    <div class="value">— <span class="unit">LUX</span></div>
+    <div class="range">Good NA–NA · Warn NA–NA</div>
+    <input type="number" placeholder="Enter value" />
+  </div>
+
+  <!-- WBGT -->
+  <div class="card">
+    <h3>WBGT <span class="badge b-ok">NA</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"
+        style="stroke:white;fill:none;stroke-width:2;margin-left:8px;">
+        <path d="M12 2a4 4 0 0 0-4 4v12a4 4 0 1 0 8 0V6a4 4 0 0 0-4-4z" />
+      </svg>
+    </h3>
+    <div class="value">— <span class="unit">°C</span></div>
+    <div class="range">Good NA–NA · Warn NA–NA</div>
+    <input type="number" placeholder="Enter value" />
+  </div>
+
+  <!-- Alarms -->
+  <div class="row two" style="margin-top:12px">
+    <div class="card">
+      <h3>Healthy Building Alarms <span id="alarmMedal" class="medal hidden">MEDAL</span></h3>
+      <div class="value" id="alarm-total">0</div>
+      <div class="unit">Total Alarms</div>
+      <div style="margin-top:12px;">Urgent: <b id="alarm-urgent">0</b> | High: <b id="alarm-high">0</b></div>
+    </div>
+    <div class="card">
+      <h3>Project</h3>
+      <div id="projectSummary" style="color:var(--muted)">No identity saved.</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <h3>Alarm List</h3>
+    <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Priority</th><th>Date & Time</th><th>Zone</th><th>Device</th><th>Type</th><th>Value</th><th>Limit</th></tr></thead>
+        <tbody id="alarmBody">
+          <tr><td colspan="7" style="color:var(--muted)">No data yet.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</section>
+
 
     
 
